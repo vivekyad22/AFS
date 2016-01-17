@@ -1,2 +1,17 @@
 AFS
 ----------------------------------------------------------------------------------------------
+The Andrew File System (AFS)[1] is a distributed file system
+which uses a set of trusted servers to present a homogeneous, location-transparent file name space to all the client workstations.
+It was developed by Carnegie Mellon University as part of the Andrew Project.[2] It is named after Andrew Carnegie and Andrew Mellon. 
+
+AFS[3] has several benefits over traditional networked file systems, particularly in the areas of security and scalability.
+AFS uses Kerberos for authentication, and implements access control lists on directories for users and groups.
+Each client caches files on the local filesystem for increased speed on subsequent requests for the same file.
+This also allows limited filesystem access in the event of a server crash or a network outage.
+Read and write operations on an open file are directed only to the locally cached copy. When a modified file is closed, the changed portions are copied back to the file server. 
+Cache consistency is maintained by callback mechanism. When a file is cached, the server makes a note of this and promises to inform the client if the file is updated by someone else. 
+
+
+
+
+
